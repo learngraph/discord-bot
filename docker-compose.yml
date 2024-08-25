@@ -1,0 +1,17 @@
+services:
+  backend:
+    image: python:3.12-alpine
+    command: ["./run.sh"]
+    working_dir: /src
+    networks:
+      - learngraphnet
+    environment:
+      DB_POSTGRES_HOST: "postgres"
+      DB_POSTGRES_PASSWORD: example
+      PRODUCTION: "false"
+    volumes:
+      - ./:/src
+networks: 
+  learngraphnet:
+    name: learngraphnet
+    external: true
