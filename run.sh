@@ -1,7 +1,6 @@
-#!/bin/sh
+#!/bin/bash
 
 set -e
-
 source .env
-source venv/Scripts/activate
-python run_bot.py
+source venv/bin/activate # only works in bash, not sh.
+venv/bin/python run_bot.py

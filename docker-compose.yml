@@ -1,7 +1,7 @@
 services:
   backend:
-    image: python:3.12-alpine
-    command: ["./run.sh"]
+    image: python:3.12.5-slim
+    command: ["/bin/bash", "./run.sh"]
     working_dir: /src
     networks:
       - learngraphnet
